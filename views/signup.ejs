@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="" type="image/x-icon"> -->
+    <link href="/public/assets/css/tailwind.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/public/assets/css/input.css">
+</head>
+
+<body class="dark:bg-gray-800">
+    <nav class="bg-gray-100 border-gray-200 dark:bg-gray-900">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a class="flex items-center space-x-3 rtl:space-x-reverse">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Signup</span>
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <a id="theme-switcher" data-theme="light" class="cursor-pointer flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 group">
+                    <svg class="mr-2 w-5 h-5 text-gray-800 dark:text-white " aria-hidden="true " xmlns="http://www.w3.org/2000/svg " fill="none " viewBox="0 0 20 20 ">
+                    <path stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " d="M10 3V1m0 18v-2M5.05 5.05 3.636 3.636m12.728 12.728L14.95 14.95M3 10H1m18 0h-2M5.05 14.95l-1.414 1.414M16.364 3.636 14.95 5.05M14
+                    10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z "/>
+                  </svg>
+                    <p>Light Mode</p>
+                </a>
+                <a id="theme-switcher" data-theme="dark" class="cursor-pointer flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700 group">
+                    <svg class="mr-2 w-5 h-5 text-gray-800 dark:text-white " aria-hidden="true " xmlns="http://www.w3.org/2000/svg " fill="none " viewBox="0 0 18 20 ">
+                    <path stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " d="M8.509 5.75c0-1.493.394-2.96 1.144-4.25h-.081a8.5 8.5 0 1 0 7.356 12.746A8.5 8.5 0 0 1 8.509 5.75Z "/>
+                  </svg>
+                    <p>Dark Mode</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="login-page grid grid-cols-2">
+        <div class="inner-div flex flex-col items-end text-xl md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse dark:text-white">
+            <h3>Welcome to</h3>
+            <h1 class="textR text-2xl font-bold">AI Powered Mental <br> Wellbeing Companion</h1>
+        </div>
+        <div class="inner-div flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <div class="table-width px-6 space-y-4 md:space-y-6 sm:p-8">
+                <h2 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                    Create an account
+                </h2>
+                <form class="space-y-4 md:space-y-6" action="/authSignup" method="POST">
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                        <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="name@company.com" required="">
+                    </div>
+                    <div>
+                        <label for="fullname" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full name</label>
+                        <input type="fullname" name="fullname" id="fullname" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Hamad Jan" required="">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="col-span-2 sm:col-span-1">
+                            <label for="age" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Age</label>
+                            <input type="number" name="age" id="age" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="22" required="">
+                        </div>
+                        <div class="col-span-2 sm:col-span-1">
+                            <label for="sex" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Gender</label>
+                            <select id="sex" name="sex" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                required="">
+                                <option selected="">Select category</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="NULL">Rather not state</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                        <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            required="">
+                    </div>
+                    <div>
+                        <label for="userbrief" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tell us about yourself</label>
+                        <input type="userbrief" name="userbrief" id="userbrief" placeholder="I am a Student and ive been feeling................" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            required="">
+                    </div>
+                    <!-- <div class="flex items-center justify-between">
+                        <div class="flex items-start">
+                            <div class="flex items-center h-5">
+                                <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
+                                    required="">
+                            </div>
+                            <div class="ml-3 text-sm">
+                                <label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
+                            </div>
+                        </div>
+                        <a href="#" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</a>
+                    </div> -->
+                    <button type="submit" class="cursor-pointer flex items-center p-2 w-full rounded-lg text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700">Sign up</button>
+                    <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+                        Already have an account? <a href="login" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Log in</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/public/assets/js/flowbite.min.js "></script>
+    <script src="/public/assets/js/app.js "></script>
+    <script src="/public/assets/js/theme-changer.js "></script>
+</body>
+
+</html>

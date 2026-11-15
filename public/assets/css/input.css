@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+span {
+    /* color: #800080; */
+    /* color: #008080; */
+}
+
+.input-bar {
+    width: 76%;
+    bottom: 20px;
+}
+
+.main-body {
+    border-top-left-radius: 50px;
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #0048ff, #ff3300, #ff3300, #ff3300);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.modal-bg {
+    background-color: rgba(0, 0, 0, 0.6)
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-width {
+    width: 75%;
+}
+
+td,
+th {
+    border: 1px solid #a3a3a3;
+    text-align: left;
+    padding: 8px;
+}
+
+th:nth-child(1) {
+    width: 20%;
+}
+
+th:nth-child(2) {
+    width: 70%;
+}
+
+th:nth-child(3) {
+    width: 10%;
+}
+
+.login-page {
+    height: 80vh;
+    margin: 0px 100px;
+    align-items: center;
+}
+
+.login-page h1 {
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.textR {
+    text-align: right;
+}
+
+.inner-div {
+    margin: 20px;
+}
+
+.trash-icon {
+    display: none;
+}
+
+.delete-chat:hover .trash-icon {
+    display: block;
+}
+
+.truncate-text {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+/* @media screen and (min-width: 768px) {
+    .login-page h1 {
+        
+    }
+} */
